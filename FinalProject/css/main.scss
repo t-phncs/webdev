@@ -1,0 +1,97 @@
+@import "aboutus.scss";
+@import "menu.scss";
+@import "gallery.scss";
+@import "contact.scss";
+
+$primary: #dbc1ac;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Della Respira", serif;
+  background: #dbc1ac;
+}
+
+/* NAVBAR */
+.nav-menu {
+  padding: 25px;
+}
+
+.fas {
+  color: $primary;
+}
+.menu {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: $primary;
+  transition: all 0.4s;
+}
+
+.menu:hover {
+  color: #e76f51;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.4s;
+}
+
+.navbar-toggler {
+  outline: none !important;
+}
+/* END NAVBAR */
+
+/* HEADER */
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/1907071/pexels-photo-1907071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      no-repeat center center/cover;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.heading {
+  animation-name: slide;
+  animation-duration: 2s;
+}
+
+.main {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* END HEADER */
+
+footer {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  margin-top: 10px;
+  padding: 12px 0;
+}
